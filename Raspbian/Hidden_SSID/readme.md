@@ -3,12 +3,12 @@
 ## Requierement
 `apt install wpa_supplicant`
 
-## Link
+## Link
 - [wpa configuration](https://debian-facile.org/doc:reseau:wpasupplicant)
 - [wpa hidden configuration](https://gist.github.com/zhanglongqi/f05f569182910c49ae4375ed61ea12f8)
 - [network interface configuration](https://raspberrypi.stackexchange.com/questions/67311/failed-to-connect-to-non-global-ctrl-ifname-when-running-wpa-cli-reconfigure)
 
-## Configure wpa supplicant
+## Configure wpa supplicant
 ### In a bash script :
 ```bash
 #!/bin/bash
@@ -39,6 +39,7 @@ network={
 }
 ```
 
+## Configure network interface
 ### Edit the network interface
 ***vim /etc/network/interfaces***
 ```
@@ -49,7 +50,7 @@ iface <INTERFACE WLAN> inet manual
 iface <YourNetworkName> inet dhcp
 ```
 
-### Restart service
+### Restart service
 ```
 systemctl restart networking
 ```
